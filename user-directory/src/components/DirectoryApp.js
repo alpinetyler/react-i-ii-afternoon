@@ -3,8 +3,9 @@ import data from '../data'
 import Navigation from './Navigation'
 import Header from './Header'
 
+
 export default class DirectoryApp extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
 
         this.state = {
@@ -14,30 +15,40 @@ export default class DirectoryApp extends Component {
 
     }
 
-   next = (index) => {
-        index = this.state.index
-        
-        this.setState({ index++ });
-      }
+    next = () => {
+        if (this.state.index < this.state.people.length - 1) {
+            let index = this.state.index + 1
+            this.setState({ index: index });
+        }
+    }
+
+    previous = () => {
+        if (this.state.index > 0) {
+            let index = this.state.index - 1
+
+            this.setState({ index: index });
+        }
+    }
 
 
 
     render() {
-        let {people, index} = this.state
+        let { people, index } = this.state
         //console.log(data[2].country)
         return (
             <div>
-            Name:{`${people[index].name.first} ${people[index].name.last}`}<br/>
-            From:{`${people[index].city}, ${people[index].country}`}<br/>
-            Employer: {`${people[index].employer}`}<br/>
-            <br/><br/>
-            Favorite Movies:<br/>
-            1.{`${people[index].favoriteMovies[0]}`}<br/>
-            2.{`${people[index].favoriteMovies[1]}`}<br/>
-            3.{`${people[index].favoriteMovies[2]}`}<br/><br/><br/>
+                <div class='counter'>{`${index + 1}/${people.length}`}<br /><br /></div>
+                Name:{`${people[index].name.first} ${people[index].name.last}`}<br />
+                From:{`${people[index].city}, ${people[index].country}`}<br />
+                Employer: {`${people[index].employer}`}<br />
+                <br /><br />
+                Favorite Movies:<br />
+                1.{`${people[index].favoriteMovies[0]}`}<br />
+                2.{`${people[index].favoriteMovies[1]}`}<br />
+                3.{`${people[index].favoriteMovies[2]}`}<br /><br /><br />
 
-            {`${index+1}/${people.length}`}<br/><br/>
-            <Navigation next={this.next} previous={this.previous}/>
+
+                <Navigation next={this.next} previous={this.previous} />
             </div>
         )
     }
