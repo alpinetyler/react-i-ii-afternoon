@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -30,4 +34,101 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.wholeDoc{
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  
+}
+
+.wrapper{
+  width: 78vw;
+  height: 100vh;
+  background: rgba(48, 36, 36, 0.829);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* justify-content: center; */
+
+}
+
+
+.DAheader{
+  background: rgb(78, 159, 212);
+  width: 78vw;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  align-center: flex-start;
+  margin: 10px 0 0 0;
+}
+
+.home{
+  margin: 40px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.countersection{
+  display: flex;
+  justify-content: flex-end;
+  align-itmems: center;
+  background: lightblue;
+  width: 65vw;
+
+}
+.counter{
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 20px 0 0;
+
+}
+
+section{
+  width: 65vw;
+  background: white;
+  height: 400px;
+  margin: 100px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  /* padding: 0 0 0 20px; */
+  font-size: 20px;
+
+}
+
+.textsection{
+
+  background: white;
+  width: 60vw;
+  padding: 0 0 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.indent{
+  width: 60vw;
+  margin: 0 0 0 40px;
+}
+
+.name{
+  font-size: 30px;
+  font-weight: bold;
+  border-bottom: 4px lightblue solid;
+}
+
+.bold{
+  font-weight: bold;
 }

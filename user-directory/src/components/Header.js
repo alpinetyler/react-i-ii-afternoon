@@ -5,9 +5,9 @@ export default class DirectoryApp extends Component {
     render() {
         
         return (
-            <div>
-              
-            </div>
+            <header className="DAheader">
+             <div className='home'>Home</div>
+            </header>
         )
     }
 }

@@ -36,20 +36,33 @@ export default class DirectoryApp extends Component {
         let { people, index } = this.state
         //console.log(data[2].country)
         return (
-            <div>
-                <div class='counter'>{`${index + 1}/${people.length}`}<br /><br /></div>
-                Name:{`${people[index].name.first} ${people[index].name.last}`}<br />
-                From:{`${people[index].city}, ${people[index].country}`}<br />
-                Employer: {`${people[index].employer}`}<br />
-                <br /><br />
-                Favorite Movies:<br />
-                1.{`${people[index].favoriteMovies[0]}`}<br />
-                2.{`${people[index].favoriteMovies[1]}`}<br />
-                3.{`${people[index].favoriteMovies[2]}`}<br /><br /><br />
+            <div className="wholeDoc">
+                <Header />
+                <div className="wrapper">
+                    <section>
+                        <div className='countersection'>
+                            <div className='counter'>{`${index + 1}/${people.length}`}<br /><br /></div>
+                        </div>
+                        <div className='textsection'>
+                            <p>
+                                <span className="name">{`${people[index].name.first} ${people[index].name.last}`}</span><br/><br/>
+                                <span className='bold'>From:  </span>{`${people[index].city}, ${people[index].country}`}<br />
+                                <span className='bold'>Employer:</span> {`${people[index].employer}`}<br />
+                                <br />
+                                <span className='bold'>Favorite Movies:</span>
+                            <span className='indent'><br/>
+                                    1.{`${people[index].favoriteMovies[0]}`}<br />
+                                    2.{`${people[index].favoriteMovies[1]}`}<br />
+                                    3.{`${people[index].favoriteMovies[2]}`}<br /><br /><br />
+                            </span>
+                                
+                            </p>
+                        </div>
+                    </section>
 
-
-                <Navigation next={this.next} previous={this.previous} />
-            </div>
-        )
-    }
+                        <Navigation next={this.next} previous={this.previous} />
+                </div>
+                </div>
+                )
+            }
 }
