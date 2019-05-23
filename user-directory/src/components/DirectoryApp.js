@@ -47,13 +47,14 @@ export default class DirectoryApp extends Component {
                             <p>
                                 <span className="name">{`${people[index].name.first} ${people[index].name.last}`}</span><br/><br/>
                                 <span className='bold'>From:  </span>{`${people[index].city}, ${people[index].country}`}<br />
+                                <span className='bold'>Job Title:</span> {`${people[index].title}`}<br />
                                 <span className='bold'>Employer:</span> {`${people[index].employer}`}<br />
                                 <br />
                                 <span className='bold'>Favorite Movies:</span>
-                            <span className='indent'><br/>
-                                    1.{`${people[index].favoriteMovies[0]}`}<br />
-                                    2.{`${people[index].favoriteMovies[1]}`}<br />
-                                    3.{`${people[index].favoriteMovies[2]}`}<br /><br /><br />
+                            <span className="indent"><br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.{`${people[index].favoriteMovies[0]}`}<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.{`${people[index].favoriteMovies[1]}`}<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.{`${people[index].favoriteMovies[2]}`}<br /><br /><br />
                             </span>
                                 
                             </p>

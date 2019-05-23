@@ -79,9 +79,11 @@
 .countersection{
   display: flex;
   justify-content: flex-end;
-  align-itmems: center;
-  background: lightblue;
+  align-items: center;
+  background: white;
   width: 65vw;
+  height: 50px;
+  padding: 20px 0 0 0;
 
 }
 .counter{
@@ -111,7 +113,7 @@ section{
 
   background: white;
   width: 60vw;
-  padding: 0 0 0 30px;
+  padding: 0 0 0 75px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -119,16 +121,50 @@ section{
 }
 
 .indent{
-  width: 60vw;
-  margin: 0 0 0 40px;
+  width: 30vw;
+  border: 0 0 0 50px;
+   
 }
 
 .name{
   font-size: 30px;
   font-weight: bold;
-  border-bottom: 4px lightblue solid;
+  border-bottom: 3px rgb(78, 159, 212) solid;
 }
 
 .bold{
+  font-weight: bold;
+}
+
+.navigation{
+  width: 65vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  
+
+}
+
+.button{
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.otherbuttons{
+  border: black 2px solid;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+button{
+  color: white;
+  background: rgb(78, 159, 212);
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
   font-weight: bold;
 }

@@ -6,8 +6,13 @@ export default class DirectoryApp extends Component {
         
         return (
             <div className="navigation">
-            <button onClick={this.props.previous}>{'<Previous '}</button>
-            <button onClick={this.props.next}>Next></button>
+            <span className='button' onClick={this.props.previous}>{'<Previous '}</span>
+            <span className='otherbuttons'>
+                <button>Edit</button>
+                <button>Delete</button>
+                <button>New</button>
+                </span>
+            <span className='button' onClick={this.props.next}>Next></span>
             </div>
         )
     }
